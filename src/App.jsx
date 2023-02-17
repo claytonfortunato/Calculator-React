@@ -1,4 +1,6 @@
-function App() {
+import "./Theme/styles.scss";
+
+const App = () => {
   return (
     <>
       <h1>Calculadora</h1>
@@ -50,6 +52,6 @@ function App() {
       </div>
     </>
   );
-}
+};
 
 export default App;
