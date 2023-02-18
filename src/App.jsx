@@ -8,18 +8,40 @@ const App = () => {
     setResult(result.concat(e.target.id));
   };
 
+  const handleClear = () => {
+    setResult("");
+  };
+
+  const deleteButton = () => {
+    setResult(result.slice(0, -1));
+  };
+
+  const calculate = () => {
+    try {
+      setResult(eval(result).toString());
+    } catch (error) {
+      setResult("Invalid");
+    }
+  };
+
   return (
     <>
       <h1>Calculadora</h1>
 
       <div className="container__calculator">
-        <input type="text" value={result} disabled />
+        <input type="text" value={result} />
 
         <div className="container__calculator__buttons">
-          <button className="container__calculator__buttons__operator">
+          <button
+            className="container__calculator__buttons__operator"
+            onClick={handleClear}
+          >
             AC
           </button>
-          <button className="container__calculator__buttons__operator">
+          <button
+            className="container__calculator__buttons__operator"
+            onClick={deleteButton}
+          >
             DE
           </button>
           <button
@@ -30,11 +52,11 @@ const App = () => {
             .
           </button>
           <button
-            id="÷"
+            id="/"
             className="container__calculator__buttons__operator"
             onClick={handleClick}
           >
-            /
+            ÷
           </button>
 
           <button
@@ -138,7 +160,10 @@ const App = () => {
           >
             0
           </button>
-          <button className="container__calculator__buttons__operator">
+          <button
+            className="container__calculator__buttons__operator__equal"
+            onClick={calculate}
+          >
             =
           </button>
         </div>

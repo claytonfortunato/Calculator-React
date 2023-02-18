@@ -1,5 +1,6 @@
 h1 {
   text-transform: uppercase;
+  text-align: center;
 }
 
 .container__calculator {
@@ -15,6 +16,8 @@ h1 {
     border: none;
     color: #fff;
     padding: 20px;
+    text-align: right;
+    font-size: 1.2rem;
   }
 
   &__buttons {
@@ -27,6 +30,11 @@ h1 {
       &:hover {
         opacity: 0.9;
         transition: 0.2s all ease-in-out;
+      }
+
+      &__equal {
+        background-color: #219ebc;
+        grid-column: span 2;
       }
     }
 
