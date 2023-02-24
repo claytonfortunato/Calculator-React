@@ -7,9 +7,13 @@
 https://user-images.githubusercontent.com/104373308/219822585-44b4c6e5-a9c0-43aa-8b52-5414cc789fc7.mp4
 
 
-
-
 </p>
+
+# 🕹 Demo
+
+*  <a href="https://extraordinary-cat-761efb.netlify.app/" target="_blank">Calculadora</a>
+
+
 
 # :computer: Projeto
 Essa aplicação web tem o intuito de demonstrar uma simples calculadora.
